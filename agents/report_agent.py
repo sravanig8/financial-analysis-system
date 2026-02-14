@@ -25,13 +25,21 @@ def generate_report(stock_data):
         dict: Contains AI-generated report sections and 'error' status
     """
     try:
-        # Get API key from environment variable
-        api_key = os.environ.get('GEMINI_API_KEY')
+        # Get API key from Streamlit secrets or environment variable
+        api_key = None
+        try:
+            import streamlit as st
+            api_key = st.secrets.get("GEMINI_API_KEY")
+        except:
+            pass
+        
+        if not api_key:
+            api_key = os.environ.get('GEMINI_API_KEY')
         
         if not api_key:
             return {
                 'error': True,
-                'message': 'GEMINI_API_KEY environment variable not set. Please set it before running.'
+                'message': 'GEMINI_API_KEY not set. Please configure it in Streamlit secrets or environment variables.'
             }
         
         # Configure Gemini API

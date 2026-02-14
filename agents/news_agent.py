@@ -21,7 +21,16 @@ def fetch_real_news_gnews(symbol, company_name=None):
         list: List of real news headlines or empty list if API fails
     """
     try:
-        api_key = os.environ.get('GNEWS_API_KEY')
+        # Get API key from Streamlit secrets or environment variable
+        api_key = None
+        try:
+            import streamlit as st
+            api_key = st.secrets.get("GNEWS_API_KEY")
+        except:
+            pass
+        
+        if not api_key:
+            api_key = os.environ.get('GNEWS_API_KEY')
         
         if not api_key:
             return []

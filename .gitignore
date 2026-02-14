@@ -43,7 +43,7 @@ MANIFEST
 .env.*.local
 
 # Streamlit
-.streamlit/
+.streamlit/secrets.toml
 streamlit_uploads/
 
 # Testing

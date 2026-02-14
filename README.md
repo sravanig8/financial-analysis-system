@@ -185,6 +185,25 @@ AI Recommendation: BUY
 Summary: Strong quarterly performance with expanding market presence
 ```
 
+## 🚀 Deployment
+
+### Deploy to Streamlit Community Cloud (Free!)
+
+1. **Fork/Push to GitHub** ✅ (Already done!)
+2. **Sign up**: Go to https://streamlit.io/cloud
+3. **Create app**: 
+   - Repository: `sravanig8/financial-analysis-system`
+   - Branch: `main`
+   - Main file: `app.py`
+4. **Add secrets** in Streamlit Cloud settings:
+   ```toml
+   GEMINI_API_KEY = "your-key-here"
+   GNEWS_API_KEY = "your-key-here"
+   ```
+5. **Deploy** and your app will be live!
+
+📖 **Full deployment guide**: See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions.
+
 ## ⚖️ Disclaimer
 
 Educational purposes only. Not financial advice. Consult professionals before investing.
