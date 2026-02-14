@@ -29,7 +29,8 @@ def generate_report(stock_data):
         api_key = None
         try:
             import streamlit as st
-            api_key = st.secrets.get("GEMINI_API_KEY")
+            if "GEMINI_API_KEY" in st.secrets:
+                api_key = st.secrets["GEMINI_API_KEY"]
         except:
             pass
         

@@ -200,11 +200,25 @@ def main():
         st.markdown("### 📌 System Status")
         
         # Try to get API keys from Streamlit secrets first, then environment variables
+        gemini_key = None
+        gnews_key = None
+        
         try:
-            gemini_key = st.secrets.get("GEMINI_API_KEY", os.environ.get('GEMINI_API_KEY'))
-            gnews_key = st.secrets.get("GNEWS_API_KEY", os.environ.get('GNEWS_API_KEY'))
+            if "GEMINI_API_KEY" in st.secrets:
+                gemini_key = st.secrets["GEMINI_API_KEY"]
         except:
+            pass
+        
+        if not gemini_key:
             gemini_key = os.environ.get('GEMINI_API_KEY')
+        
+        try:
+            if "GNEWS_API_KEY" in st.secrets:
+                gnews_key = st.secrets["GNEWS_API_KEY"]
+        except:
+            pass
+        
+        if not gnews_key:
             gnews_key = os.environ.get('GNEWS_API_KEY')
         
         if gemini_key:

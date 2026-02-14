@@ -25,7 +25,8 @@ def fetch_real_news_gnews(symbol, company_name=None):
         api_key = None
         try:
             import streamlit as st
-            api_key = st.secrets.get("GNEWS_API_KEY")
+            if "GNEWS_API_KEY" in st.secrets:
+                api_key = st.secrets["GNEWS_API_KEY"]
         except:
             pass
         
