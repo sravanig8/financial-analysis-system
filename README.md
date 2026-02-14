@@ -196,22 +196,6 @@ Summary: Strong quarterly performance with expanding market presence
 
 Educational purposes only. Not financial advice. Consult professionals before investing.
 
-## 🎬 Adding Screenshots & Video to GitHub
-
-1. **Create `screenshots/` folder**
-2. **Add screenshots** (use Windows Snipping Tool - Win+Shift+S):
-   - `dashboard.png` - Main dashboard
-   - `chart.png` - Price chart
-   - `insights.png` - AI insights
-3. **Add demo video** (use OBS Studio or Win+G):
-   - `demo.mp4` - Screen recording of dashboard in action
-4. **Commit & push**:
-   ```bash
-   git add screenshots/
-   git commit -m "Add screenshots and demo video"
-   git push origin main
-   ```
-
 ## 📦 Requirements
 
 - Python 3.10+
