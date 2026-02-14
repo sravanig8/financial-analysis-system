@@ -45,10 +45,6 @@ python main.py
 ### AI Insights Panel  
 ![Insights](screenshots/insights.png)
 
-## 🎥 Demo Video
-
-[Watch Full Demo](screenshots/demo.mp4)
-
 ## ✨ Features
 
 - 🔄 **5 AI Agents**: Market → News → Sentiment → Analysis → Gemini Report
