@@ -42,9 +42,6 @@ python main.py
 ![Dashboard](screenshots/dashboard.png)
 *Multi-Agent Financial Intelligence Dashboard showing real-time market data, news integration, sentiment analysis, and AI-powered insights*
 
-### Price Chart & Trends
-![Chart](screenshots/chart.png)
-
 ### AI Insights Panel  
 ![Insights](screenshots/insights.png)
 
